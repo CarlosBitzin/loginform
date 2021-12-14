@@ -41,6 +41,58 @@ body {
   text-align: center;
 }
 
+form {
+  width: 360px;
+}
+
 .avatar {
   width: 100px;
+}
+
+form h2 {
+  font-size: 2.9rem;
+  text-transform: uppercase;
+  margin: 15px 0;
+  color: #333;
+}
+
+.div-input {
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 25px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.div-input .one {
+  margin-top: 0;
+}
+
+.div-input .one {
+  margin-bottom: 4px;
+}
+
+.i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i {
+  color: #d9d9d9;
+}
+
+.div-input > div {
+  position: relative;
+  height: 45px;
+}
+
+.div-input > div h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  transition: 0.3s;
 }
