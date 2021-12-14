@@ -57,6 +57,7 @@ form h2 {
 }
 
 .div-input {
+  position: relative;
   display: grid;
   grid-template-columns: 7% 93%;
   margin: 25px 0;
@@ -64,11 +65,41 @@ form h2 {
   border-bottom: 2px solid #d9d9d9;
 }
 
-.div-input .one {
+.div-input:after,
+.div-input:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #38d39f;
+}
+
+.div-input:after {
+  right: 50%s;
+}
+.input-div:before {
+  left: 50%;
+}
+.div-input.focus .i i {
+  color: #38d39f;
+}
+
+.div-input.focus div h5 {
+  top: -5px;
+  font-size: 15px;
+}
+
+.div-input.focus:after,
+.div-input.focus:before {
+  width: 50%;
+}
+
+.div-input.one {
   margin-top: 0;
 }
 
-.div-input .one {
+.div-input.two {
   margin-bottom: 4px;
 }
 
@@ -95,4 +126,54 @@ form h2 {
   color: #999;
   font-size: 18px;
   transition: 0.3s;
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+}
+
+a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #999;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #38d39f;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  background-size: 200%;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-position: right;
 }
